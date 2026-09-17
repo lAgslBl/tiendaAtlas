@@ -1,1 +1,6 @@
+#Dependencias de Node
 node_modules
+#Carpeta construida
+proyectp    
+#Variables de entorno
+.env

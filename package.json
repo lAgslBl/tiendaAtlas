@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/index.js --exec babel-node"
+    "dev": "nodemon src/index.js --exec babel-node",
+    "build": "babel src -d proyectp && ncp src/views proyectp/views && ncp src/frontend proyectp/frontend"
   },
   "keywords": [],
   "author": "",
@@ -23,7 +24,9 @@
     "@babel/cli": "^7.29.7",
     "@babel/core": "^7.29.7",
     "@babel/node": "^7.29.7",
+    "@babel/plugin-transform-regenerator": "^7.29.8",
     "@babel/preset-env": "^7.29.7",
+    "ncp": "^2.0.0",
     "nodemon": "^3.1.14"
   }
 }
