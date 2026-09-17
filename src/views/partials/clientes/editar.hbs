@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="card card-body bg-dark p-4 text-white">
+        <h4>Actualizar cliente</h4>
+        <form action="/clientes/{{clientes._id}}/update" method="POST">
+          <div>
+            <label for="nombre">Modifica nombre:</label>
+            <input type="text" name="nombre" value="{{clientes.nombre}}"
+              class="form-control bg-dark text-white"/>
+          </div>
+          <div>
+            <label for="apellido">Modifica apellido:</label>
+            <input type="text" name="apellido" value="{{clientes.apellido}}"
+              class="form-control bg-dark text-white"/>
+          </div>
+          <div>
+            <label for="email">Modifica email:</label>
+            <input type="email" name="email" value="{{clientes.email}}"
+              class="form-control bg-dark text-white"/>
+          </div>
+          <div>
+            <label for="telefono">Modifica teléfono:</label>
+            <input type="text" name="telefono" value="{{clientes.telefono}}"
+              class="form-control bg-dark text-white"/>
+          </div>
+          <div>
+            <label for="fechaNacimiento">Modifica fecha de nacimiento:</label>
+            <input type="date" name="fechaNacimiento"
+              value="{{fechaParaInput clientes.fechaNacimiento}}"
+              class="form-control bg-dark text-white"/>
+          </div>
+          <div>
+            <label for="direccion">Modifica dirección:</label>
+            <textarea name="direccion" cols="30" rows="2"
+              class="form-control bg-dark text-white">{{clientes.direccion}}</textarea>
+          </div>
+          <div>
+            <label for="ciudad">Modifica ciudad:</label>
+            <input type="text" name="ciudad" value="{{clientes.ciudad}}"
+              class="form-control bg-dark text-white"/>
+          </div>
+          <div>
+            <label for="codigoPostal">Modifica código postal:</label>
+            <input type="text" name="codigoPostal" value="{{clientes.codigoPostal}}"
+              class="form-control bg-dark text-white"/>
+          </div>
+          <div>
+            <label for="rfc">Modifica RFC:</label>
+            <input type="text" name="rfc" value="{{clientes.rfc}}"
+              class="form-control bg-dark text-white"/>
+          </div>
+          <div>
+            <label for="notas">Modifica notas:</label>
+            <textarea name="notas" cols="30" rows="2"
+              class="form-control bg-dark text-white">{{clientes.notas}}</textarea>
+          </div>
+          <button class="btn btn-info mt-2">Actualizar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

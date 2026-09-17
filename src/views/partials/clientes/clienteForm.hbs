@@ -1,0 +1,66 @@
+<div class="card card-body p-4 rounded-0 bg-dark text-white">
+    <h4>Agregar el cliente</h4>
+    <form action="/clientes/agregar" method="POST">
+        <div>
+            <label for="nombre">Escribe nombre:</label>
+            <input type="text" name="nombre" placeholder="Name" id="nombre"
+            class="form-control bg-dark text-white"/>
+        </div>
+
+        <div>
+            <label for="apellido">Escribe apellido:</label>
+            <input type="text" name="apellido" placeholder="Last name" id="apellido"
+            class="form-control bg-dark text-white"/>
+        </div>
+
+        <div>
+            <label for="email">Escribe email:</label>
+            <input type="email" name="email" placeholder="Email" id="email"
+            class="form-control bg-dark text-white"/>
+        </div>
+
+        <div>
+            <label for="telefono">Escribe teléfono:</label>
+            <input type="text" name="telefono" placeholder="Phone" id="telefono"
+            class="form-control bg-dark text-white"/>
+        </div>
+
+        <div>
+            <label for="fechaNacimiento">Fecha de nacimiento:</label>
+            <input type="date" name="fechaNacimiento" id="fechaNacimiento"
+            class="form-control bg-dark text-white"/>
+        </div>
+
+        <div>
+            <label for="direccion">Escribe dirección:</label>
+            <textarea name="direccion" cols="25" rows="2" placeholder="Address"
+            class="form-control bg-dark text-white"></textarea>
+        </div>
+
+        <div>
+            <label for="ciudad">Escribe ciudad:</label>
+            <input type="text" name="ciudad" placeholder="City" id="ciudad"
+            class="form-control bg-dark text-white"/>
+        </div>
+
+        <div>
+            <label for="codigoPostal">Escribe código postal:</label>
+            <input type="text" name="codigoPostal" placeholder="Zip code" id="codigoPostal"
+            class="form-control bg-dark text-white"/>
+        </div>
+
+        <div>
+            <label for="rfc">Escribe RFC:</label>
+            <input type="text" name="rfc" placeholder="RFC" id="rfc"
+            class="form-control bg-dark text-white"/>
+        </div>
+
+        <div>
+            <label for="notas">Notas adicionales:</label>
+            <textarea name="notas" cols="25" rows="2" placeholder="Notes"
+            class="form-control bg-dark text-white"></textarea>
+        </div>
+
+        <button class="btn btn-success btn-sm mt-2">Agregar</button>
+    </form>
+</div>

@@ -1,0 +1,55 @@
+{{#if clientes}}
+<div class="table-responsive">
+  <table class="table table-bordered table-hover table-dark">
+    <thead>
+      <tr class="text-center">
+        <th>Num.</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Email</th>
+        <th>Teléfono</th>
+        <th>Nacimiento</th>
+        <th>Dirección</th>
+        <th>Ciudad</th>
+        <th>CP</th>
+        <th>RFC</th>
+        <th>Notas</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each clientes}}
+        <tr>
+          <td>{{@index}}</td>
+          <td>{{nombre}}</td>
+          <td>{{apellido}}</td>
+          <td>{{email}}</td>
+          <td>{{telefono}}</td>
+          <td>{{formatoFecha fechaNacimiento}}</td>
+          <td>{{direccion}}</td>
+          <td>{{ciudad}}</td>
+          <td>{{codigoPostal}}</td>
+          <td>{{rfc}}</td>
+          <td>{{notas}}</td>
+          <td>
+            {{#if opcion}}
+              <a href="/clientes/{{_id}}/status" class="btn btn-warning btn-sm">Inactivo</a>
+            {{else}}
+              <a href="/clientes/{{_id}}/status" class="btn btn-success btn-sm">Activo</a>
+            {{/if}}
+            <a href="/clientes/{{_id}}/update" class="btn btn-info btn-sm">Actualizar</a>
+            <a href="/clientes/{{_id}}/delete" class="btn btn-danger btn-sm">Eliminar</a>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+{{else}}
+  <div class="h-100 d-flex align-items-center justify-content-center">
+    <div class="text-center text-white">
+      <h1>No hay clientes</h1>
+      <img src="/icons/pngwing.com.png" class="w-75"/>
+    </div>
+  </div>
+{{/if}}
