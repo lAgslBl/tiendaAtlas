@@ -5,13 +5,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/index.js --exec babel-node",
-    "build": "babel src -d proyectp && ncp src/views proyectp/views && ncp src/frontend proyectp/frontend"
+    "build": "babel src -d proyectp && ncp src/views proyectp/views && ncp src/frontend proyectp/frontend",
+    "start": "node proyectp/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@babel/runtime": "^8.0.5",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
