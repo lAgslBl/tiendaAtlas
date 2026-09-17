@@ -1,0 +1,49 @@
+{{#if productos}}
+  <table class="table table-bordered table-hover table-dark">
+    <thead>
+      <tr class="text-center">
+        <th>Num.</th>
+        <th>Nombre</th>
+        <th>Descripcion</th>
+        <th>Precio</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each productos}}
+        <tr>
+          <td>{{@index}}</td>
+          <td>{{nombre}}</td>
+          <td>{{descripcion}}</td>
+          <td>{{precio}}</td>
+          <td>
+            {{#if opcion}}
+              <a href="/productos/{{_id}}/status" class="btn btn-warning">No
+                disponible</a>
+            {{else}}
+              <a
+                href="/productos/{{_id}}/status"
+                class="btn btn-success"
+              >Disponible</a>
+            {{/if}}
+            <a
+              href="/productos/{{_id}}/update"
+              class="btn btn-info"
+            >Actualizar</a>
+            <a
+              href="/productos/{{_id}}/delete"
+              class="btn btn-danger"
+            >Eliminar</a>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+{{else}}
+  <div class="h-100 d-flex align-items-center justify-content-center">
+    <div class="text-center text-white">
+      <h1>No hay productos</h1>
+      <img src="/icons/pngwing.com.png" class="w-75"/>
+    </div>
+  </div>
+{{/if}}
